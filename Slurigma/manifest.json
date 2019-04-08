@@ -1,0 +1,20 @@
+{
+	"name": "Slurigma",
+	"version": "0.0.1",
+	"description": "Slur Machine Extenstion",
+	"manifest_version": 2,
+	"permissions": [
+	"storage",
+	"contextMenus",
+	"tabs",
+	"storage",
+	"http://www.slurmachine.fun/*" ],
+	"background": {
+		"scripts": [
+		"jquery.js",
+		"background.js",
+		"methods.js"],
+		"persistent": true
+	}
+		
+}
