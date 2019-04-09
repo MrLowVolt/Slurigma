@@ -1,8 +1,8 @@
 {
-	"name": "Slurigma",
-	"version": "0.0.1",
-	"description": "Slur Machine Extenstion",
 	"manifest_version": 2,
+	"name": "Slurigma",
+	"version": "0.0.2",
+	"description": "Slur Machine Extenstion",
 	"permissions": [
 	"storage",
 	"contextMenus",
@@ -15,6 +15,9 @@
 		"background.js",
 		"methods.js"],
 		"persistent": true
-	}
-		
+		},
+	"icons": { "16": "slur16.png",
+			   "48": "slur48.png",
+			  "128": "slur128.png" }
+
 }

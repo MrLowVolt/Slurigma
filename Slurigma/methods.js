@@ -1,11 +1,9 @@
 //GLOBAL FORMATED DATE
-var dateText = getFormattedDate(new Date());
-	
+var dateText = getDate(new Date());
 //GLOBAL WORD ARRAYS
 var badWords = [];
 var safeWords = [];
 getWords();
-
 	
 //METHOD TO POPULATE WORD ARRAYS
 function getWords() {
@@ -20,23 +18,19 @@ function getWords() {
 	});
 }
 
-//METHOD TO GET DATE AND FORMAT MM dd yy
-function getFormattedDate(date) {
-	//get two digit year (yy)
-	var year = date.getFullYear().toString().substr(-2);
+//METHOD TO RETURN FORMATED DATE (MONTH dd yyyy)
+function getDate(date) {
+	var monthNames = [
+		'January', 'February', 'March', 'April', 'May', 'June',
+		'July', 'August', 'September', 'October', 'November',
+		'December'
+	];
 	
-	//get month and pad with 0 if needed (MM)
-	var month = (1 + date.getMonth()).toString();
-	month = month.length > 1 ? month : '0' + month;
-	
-	//get day (dd)
-	var day = date.getDate().toString();
-  
-	//return result formated MM dd yy
-	return month + ' ' + day + ' ' + year;
-
+	var day = date.getDate();
+	var month = monthNames[date.getMonth()];
+	var year = date.getFullYear();
+	return month+' '+day+' '+year;
 }
-
 
 //METHOD TO ENCODE "NAUGHTY WORDS"
 function encode(encodeString) {
